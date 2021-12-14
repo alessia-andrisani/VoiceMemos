@@ -54,8 +54,9 @@ struct ListView: View {
     var body: some View {
         NavigationView {
             
-            VStack {
+            
                 ZStack {
+                    VStack {
                     
                     List {
                         
@@ -64,7 +65,7 @@ struct ListView: View {
                                 if !(editMode && recording.id == indice)  {
                                     Text(recording.name ?? "Unknown")
                                         .font(.title2)
-                                        .bold()
+                                        .fontWeight(.semibold)
                                         .onTapGesture(count: 2) {
                                             editMode.toggle()
                                             indice = recording.id
@@ -123,34 +124,35 @@ struct ListView: View {
                     .searchable(text: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=$text@*/.constant("")/*@END_MENU_TOKEN@*/, placement: /*@START_MENU_TOKEN@*/.automatic/*@END_MENU_TOKEN@*/)
                     
                     
+                        Button (action: {
+                            //azione bottone
+                            print("Starting recording...")
+                            showingModal.toggle()
+                            startaudio()
+                            impact.impactOccurred()
+                            
+                        })
+                        {
+                            
+                            (Image(systemName: "record.circle")
+                                .foregroundColor(.red)
+                                .font(.system(size: 70)))
+                                .opacity(TextFieldisFocused ? 0 : 1)
+                            
+                        }
+                       
+                        
+                        
+                        .sheet(isPresented: $showingModal) {
+                            ModalView()
+                        }
+ 
+                }
+                
                     Text("Tap the record button to create a voice memo")
                         .font(.system(size: 14))
                         .foregroundColor(.secondary)
                         .opacity(opacity)
-                    
-                    
-                }
-                
-                Button (action: {
-                    //azione bottone
-                    print("Starting recording...")
-                    showingModal.toggle()
-                    startaudio()
-                    impact.impactOccurred()
-                    
-                })
-                {
-                    
-                    (Image(systemName: "record.circle")
-                        .foregroundColor(.red)
-                        .font(.system(size: 70)))
-                        .opacity(TextFieldisFocused ? 0 : 1)
-                    
-                }
-                
-                .sheet(isPresented: $showingModal) {
-                    ModalView()
-                }
                 
             }
             
