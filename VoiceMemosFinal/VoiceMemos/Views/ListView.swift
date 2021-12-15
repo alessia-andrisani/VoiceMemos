@@ -21,7 +21,7 @@ struct ListView: View {
     
     @Environment(\.managedObjectContext) var moc
     @FetchRequest(sortDescriptors: [
-        SortDescriptor(\.id)
+        SortDescriptor(\.name)
     ]) var recordings: FetchedResults<Recording>
     
     //
@@ -140,6 +140,7 @@ struct ListView: View {
                                 .opacity(TextFieldisFocused ? 0 : 1)
                             
                         }
+                        .disabled(TextFieldisFocused == true)
                        
                         
                         
