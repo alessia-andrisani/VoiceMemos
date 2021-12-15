@@ -17,6 +17,7 @@ struct ModalView: View {
     @State private var name = ""
     @State private var time = Date()
     @State private var duration = "0.3"
+    @State private var randomDouble = Double.random(in: 0...5)
     
     @State var audioPlayer: AVAudioPlayer?
 
@@ -66,7 +67,8 @@ struct ModalView: View {
                 
 //                newRecording.name = "Voice Memo \(recordings.count)"
                 newRecording.time = time.timeFormatted
-                newRecording.duration = duration
+                newRecording.duration = String(format: "%.1f", ceil(randomDouble * 10) / 10.0)
+                
 
                 try? moc.save()
                 
