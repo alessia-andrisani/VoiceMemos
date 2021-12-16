@@ -65,9 +65,9 @@ struct ModalView: View {
                 newRecording.time = time.timeFormatted
                 newRecording.duration = String(format: "%.1f", ceil(randomDouble * 10) / 10.0)
                 
-
-                try? moc.save()
-                
+                if moc.hasChanges {
+                    try? moc.save()
+                }
                 dismiss()
                 
                 

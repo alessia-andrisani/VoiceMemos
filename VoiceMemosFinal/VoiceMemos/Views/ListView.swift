@@ -187,8 +187,9 @@ struct ListView: View {
             let recording = recordings[offset]
             moc.delete(recording)
         }
-        
-        try? moc.save()
+        if moc.hasChanges {
+            try? moc.save()
+        }
     }
     
     
@@ -213,7 +214,9 @@ struct ListView: View {
             print(index)
             recordings[index].name = recordingName
         }
-        try? moc.save()
+        if moc.hasChanges {
+            try? moc.save()
+        }
     }
     
 }
