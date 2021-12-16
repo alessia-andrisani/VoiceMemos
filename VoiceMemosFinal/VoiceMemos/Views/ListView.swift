@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ListView: View {
     
-    //Per fixare la lista
+    //Per identificare elementi nella lista
     
     @State private var editMode = false
     @State private var indice: UUID?
@@ -180,7 +180,7 @@ struct ListView: View {
         
     }
     
-    
+    //Delete function
     
     func deleteRecordings(at offsets: IndexSet) {
         for offset in offsets {
@@ -190,6 +190,10 @@ struct ListView: View {
         
         try? moc.save()
     }
+    
+    
+    
+    //Making the "add new recording" text disappear 
     
     func checkOpacity() {
         if recordings.count == 0 {

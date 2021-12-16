@@ -10,7 +10,6 @@ import SwiftUI
 struct ModalView: View {
     @Environment(\.managedObjectContext) var moc
     @Environment(\.dismiss) var dismiss
-//    @Binding var showingModal: Bool
     @FetchRequest(sortDescriptors: [
         SortDescriptor(\.name)
     ]) var recordings: FetchedResults<Recording>
@@ -62,10 +61,7 @@ struct ModalView: View {
                     newRecording.name = "Voice Memo \(recordings.count)"
                     
                 }
-                
-                
-                
-//                newRecording.name = "Voice Memo \(recordings.count)"
+
                 newRecording.time = time.timeFormatted
                 newRecording.duration = String(format: "%.1f", ceil(randomDouble * 10) / 10.0)
                 
