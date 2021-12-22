@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5050DBD62773870100C959F7 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5050DBD42773870100C959F7 /* Localizable.strings */; };
 		509F25F8276243AA001B19F0 /* VoiceMemosApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509F25F7276243AA001B19F0 /* VoiceMemosApp.swift */; };
 		509F25FA276243AA001B19F0 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509F25F9276243AA001B19F0 /* ListView.swift */; };
 		509F25FC276243AB001B19F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 509F25FB276243AB001B19F0 /* Assets.xcassets */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5050DBD52773870100C959F7 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/Localizable.strings; sourceTree = "<group>"; };
 		509F25F4276243AA001B19F0 /* VoiceMemos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VoiceMemos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		509F25F7276243AA001B19F0 /* VoiceMemosApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceMemosApp.swift; sourceTree = "<group>"; };
 		509F25F9276243AA001B19F0 /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
@@ -51,6 +53,7 @@
 		509F25EB276243AA001B19F0 = {
 			isa = PBXGroup;
 			children = (
+				5050DBD42773870100C959F7 /* Localizable.strings */,
 				509F25F6276243AA001B19F0 /* VoiceMemos */,
 				509F25F5276243AA001B19F0 /* Products */,
 			);
@@ -157,6 +160,7 @@
 			knownRegions = (
 				en,
 				Base,
+				it,
 			);
 			mainGroup = 509F25EB276243AA001B19F0;
 			productRefGroup = 509F25F5276243AA001B19F0 /* Products */;
@@ -173,6 +177,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5050DBD62773870100C959F7 /* Localizable.strings in Resources */,
 				50F3E1312767BDDF001B76CF /* StartAudio.mp3 in Resources */,
 				509F25FF276243AB001B19F0 /* Preview Assets.xcassets in Resources */,
 				509F25FC276243AB001B19F0 /* Assets.xcassets in Resources */,
@@ -199,6 +204,17 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		5050DBD42773870100C959F7 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5050DBD52773870100C959F7 /* it */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		509F2600276243AB001B19F0 /* Debug */ = {
