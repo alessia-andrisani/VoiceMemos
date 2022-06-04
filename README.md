@@ -1,4 +1,4 @@
-# VoiceMemos-Vin-Brule
+# VoiceMemos
 
 
 In this project I tried to replicate `VoiceMemos` in order to learn how to use CoreData in `SwiftUI`. 
